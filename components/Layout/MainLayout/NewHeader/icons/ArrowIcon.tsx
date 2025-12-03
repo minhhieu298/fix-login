@@ -1,0 +1,22 @@
+import type { FC } from "react";
+
+import { IComponentProps } from "../../types";
+
+export const ArrowIcon: FC<IComponentProps<HTMLOrSVGElement>> = (props) => {
+  return (
+    <svg
+      width={props.width ?? 20}
+      height={props.height ?? 20}
+      viewBox="0 0 17 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M6.17754 2.95437C6.38721 2.77465 6.70286 2.79893 6.88257 3.0086L10.8826 7.67526C11.0431 7.86251 11.0431 8.13881 10.8826 8.32606L6.88257 12.9927C6.70286 13.2024 6.38721 13.2267 6.17754 13.047C5.96788 12.8672 5.9436 12.5516 6.12331 12.3419L9.8444 8.00066L6.12331 3.65939C5.9436 3.44973 5.96788 3.13408 6.17754 2.95437Z"
+        fill={props.color ?? "#1AAF74"}
+      />
+    </svg>
+  );
+};

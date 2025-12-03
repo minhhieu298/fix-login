@@ -1,0 +1,154 @@
+.iconNavBar {
+  background-color: #40464a;
+  border-radius: 100px;
+  height: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexGrow::-webkit-scrollbar {
+  display: none;
+}
+
+.listIconButton {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.ml4 {
+  margin-left: 4px;
+}
+
+.appbar {
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px 12px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE và Edge */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Standard */
+}
+
+.iconWrapper::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+  display: none; /* Webkit browsers */
+}
+
+.iconBottomWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.iconCenter {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* transition: transform 0.2s; */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Standard */
+}
+
+/* .iconCenter:hover {
+  transform: scale(1.2);
+} */
+
+.appbarWrapper {
+  border-radius: 100px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px 12px;
+}
+
+.searchBoxInput {
+  color: #fff;
+  border-radius: 100px;
+  /* border: 0.5px solid #3f4160; */
+  background-color: #2c3137;
+}
+
+.searchBoxInput::placeholder {
+  color: #c1c1c1;
+}
+
+.searchIcon {
+  color: #fff;
+}
+
+.MuiOutlinedInput-input {
+  padding: 2.5px 14px;
+  font-size: 13px;
+}
+
+.inputAdornment {
+  color: #fff;
+  font-size: 1.5rem !important;
+  .MuiSvgIcon-root {
+    font-size: 1.5rem !important;
+  }
+}
+
+.wrapIconVertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.wrapIconCenter {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.wrapIconCenter::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Chặn bôi đen text và icon trong Header */
+.noSelect {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Standard */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-tap-highlight-color: transparent; /* Mobile webkit */
+}
+
+.noSelect * {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Standard */
+}

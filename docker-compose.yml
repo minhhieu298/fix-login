@@ -1,0 +1,20 @@
+services:
+  app:
+    image: root-container-eztrade
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eztrade-app
+    ports:
+      - "5001:5001"
+    environment:
+      - NEXT_PUBLIC_NEXT_DOMAIN_GATEWAYS=http://dev.gateway.fpts.com.vn
+      - NEXT_PUBLIC_NEXT_DOMAIN_MARKETSTREAM=https://marketstream.fpts.com.vn
+      - PORT=5001
+      - NEXT_PUBLIC_SENTRY_DSN=https://06c13a0cde4da095af97d5e3dcfe6d3b@sentry.fpts.com.vn/2
+      - NEXT_PUBLIC_SENTRY_ORG=sentry
+      - NEXT_PUBLIC_SENTRY_PROJECT=demo-sentry
+      - NEXT_PUBLIC_SENTRY_URL=https://sentry.fpts.com.vn
+      - NEXT_PUBLIC_SENTRY_RELEASE=1.0.0
+      - NEXT_PUBLIC_SENTRY_ENV=production
+    restart: unless-stopped

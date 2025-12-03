@@ -1,0 +1,670 @@
+.rangePickerInput {
+  background-color: #1e1e1e !important;
+  border: 1px solid #3a3a3a !important;
+  color: #fff !important;
+  font-size: 14px;
+  min-height: 36px;
+}
+
+.navigationIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c3137;
+  color: #858b93;
+}
+
+.navigationIcon:hover {
+  background-color: #3c4147;
+}
+
+.rangePickerInput input {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+/* Custom popup styles */
+.rangePickerPopup :global(.ant-picker-panel-container) {
+  background-color: #212427;
+}
+
+.rangePickerPopup :global(.ant-picker-date-panel .ant-picker-cell) {
+  padding: 2px 0px;
+}
+
+.rangePickerPopup
+  :global(.ant-picker-date-panel .ant-picker-cell .ant-picker-cell-inner) {
+  min-height: 36px;
+  min-width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: unset;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel .ant-picker-cell-today .ant-picker-cell-inner::before
+  ) {
+  border: 2px solid #1aaf74 !important;
+  border-radius: 8px !important;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell.ant-picker-cell-range-start
+      .ant-picker-cell-inner
+  ),
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell.ant-picker-cell-range-end
+      .ant-picker-cell-inner
+  ) {
+  background-color: #1aaf74 !important;
+  border-radius: 8px !important;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell-in-range.ant-picker-cell-range-start::before
+  ),
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell-in-range.ant-picker-cell-range-end::before
+  ) {
+  background-color: #0b4d32 !important;
+  min-height: 36px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell-in-range.ant-picker-cell-range-start
+      .ant-picker-cell-inner::before
+  ) {
+  border: 2px solid #1aaf74 !important;
+}
+
+.rangePickerPopup
+  :global(.ant-picker-date-panel .ant-picker-cell-in-range::before) {
+  background: #0b4d32 !important;
+  min-height: 36px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel .ant-picker-cell-in-range .ant-picker-cell-inner
+  ) {
+  color: #1aaf74;
+  background-color: #0b4d32;
+  border-radius: 0px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell:not(.ant-picker-cell-in-view, .ant-picker-cell-in-range)
+      .ant-picker-cell-inner
+  ) {
+  color: #4d4d4d;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell:not(.ant-picker-cell-in-view).ant-picker-cell-in-range
+      .ant-picker-cell-inner
+  ) {
+  color: #1d6a4e;
+  border-radius: 0px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell:not(
+        .ant-picker-cell-in-view
+      ).ant-picker-cell-in-range::before
+  ) {
+  color: #1d6a4e;
+  background-color: #203933;
+  min-height: 36px;
+}
+
+.rangePickerPopup :global(.ant-picker-date-panel .ant-picker-header),
+.rangePickerPopup :global(.ant-picker-date-panel .ant-picker-content td) {
+  color: #fff;
+}
+
+.rangePickerPopup :global(.ant-picker-date-panel .ant-picker-content th) {
+  color: #858b93;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.rangePickerPopup :global(.ant-picker-date-panel .ant-picker-body) {
+  padding: 12px 16px 16px 16px !important;
+}
+
+.rangePickerPopup :global(.ant-picker-date-panel .ant-picker-header) {
+  padding: 16px 16px 0px 16px !important;
+}
+
+.rangePickerPopup :global(.ant-picker-date-panel .ant-picker-header-view) {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel .ant-picker-header-view .ant-picker-month-btn
+  ) {
+  position: relative;
+  text-transform: capitalize;
+  padding: 10px 22px 10px 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel .ant-picker-header-view .ant-picker-month-btn:hover
+  ) {
+  outline: 1px solid #1aaf74;
+  color: inherit;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel .ant-picker-header-view .ant-picker-month-btn
+  )::after {
+  content: "";
+  position: absolute;
+  bottom: 10.5px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  background-color: #1aaf74;
+  border-radius: 2px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.rangePickerPopup
+  :global(.ant-picker-date-panel .ant-picker-header-view .ant-picker-year-btn) {
+  position: relative;
+  padding: 10px 22px 10px 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.rangePickerPopup :global(.ant-picker-header) {
+  border-bottom: none;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel .ant-picker-header-view .ant-picker-year-btn:hover
+  ) {
+  outline: 1px solid #1aaf74;
+  color: inherit;
+}
+
+.rangePickerPopup :global(.ant-picker-date-panel .ant-picker-header-view) {
+  gap: 2px;
+}
+
+.rangePickerPopup :global(.ant-picker-header-view > button:not(:first-child)) {
+  margin-inline-start: 0px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-date-panel .ant-picker-header-view .ant-picker-year-btn
+  )::after {
+  content: "";
+  position: absolute;
+  bottom: 10.5px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  background-color: #1aaf74;
+  border-radius: 2px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.rangePickerPopup
+  :global(.ant-picker-date-panel .ant-picker-header-super-prev-btn) {
+  display: none !important;
+}
+
+.rangePickerPopup
+  :global(.ant-picker-date-panel .ant-picker-header-super-next-btn) {
+  display: none !important;
+}
+
+.rangePickerPopup :global(.ant-picker-footer-extra) {
+  padding: 0px;
+}
+
+.rangePickerPopup :global(.ant-picker-month-panel) {
+  width: 354px;
+}
+
+.rangePickerPopup :global(.ant-picker-month-panel .ant-picker-body) {
+  padding: 12px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-month-panel
+      .ant-picker-body
+      .ant-picker-cell-range-start::before
+  ) {
+  inset-inline-start: 100%;
+  height: 44px;
+  background-color: #1d6a4e;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-month-panel .ant-picker-body .ant-picker-cell-in-range::before
+  ) {
+  height: 44px;
+  background-color: #0b4d32;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-month-panel .ant-picker-body .ant-picker-cell-range-end::before
+  ) {
+  inset-inline-end: 100%;
+  height: 44px;
+  background-color: #1d6a4e;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-month-panel .ant-picker-header .ant-picker-year-btn:hover
+  ) {
+  color: #1aaf74 !important;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-year-panel .ant-picker-header .ant-picker-decade-btn:hover
+  ) {
+  color: #1aaf74 !important;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-month-panel
+      .ant-picker-body
+      .ant-picker-cell
+      .ant-picker-cell-inner
+  ) {
+  width: 110px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #efefef;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.rangePickerPopup
+  :global(.ant-picker-body .ant-picker-cell-disabled .ant-picker-cell-inner) {
+  color: #4d4d4d !important;
+}
+
+.rangePickerPopup :global(.ant-picker-cell-disabled::before) {
+  background-color: transparent;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-month-panel
+      .ant-picker-body
+      .ant-picker-cell-range-start
+      .ant-picker-cell-inner
+  ) {
+  border: 1px solid #1aaf74;
+  border-radius: 8px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-month-panel
+      .ant-picker-body
+      .ant-picker-cell-range-end
+      .ant-picker-cell-inner
+  ) {
+  border: 1px solid #1aaf74;
+  border-radius: 8px;
+}
+
+.rangePickerPopup .panelContainer {
+  background-color: #212427;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 16px 0px 16px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-month-panel .ant-picker-header-view .ant-picker-year-btn
+  ) {
+  color: #efefef !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.rangePickerPopup :global(.ant-picker-month-panel .ant-picker-header) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 12px 0px 12px;
+}
+
+.rangePickerPopup :global(.ant-picker-month-panel .ant-picker-header-view) {
+  line-height: 1.5;
+}
+
+.rangePickerPopup :global(.ant-picker-year-panel .ant-picker-header) {
+  color: #efefef !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.rangePickerPopup :global(.ant-picker-year-panel .ant-picker-header) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 12px 0px 12px;
+}
+
+.rangePickerPopup :global(.ant-picker-year-panel .ant-picker-header-view) {
+  line-height: 1.5;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-year-panel
+      .ant-picker-body
+      .ant-picker-cell
+      .ant-picker-cell-inner
+  ) {
+  width: 110px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #efefef;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.rangePickerPopup :global(.ant-picker-year-panel) {
+  width: 354px;
+}
+
+.rangePickerPopup :global(.ant-picker-year-panel .ant-picker-body) {
+  padding: 12px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-year-panel .ant-picker-body .ant-picker-cell-range-start::before
+  ) {
+  inset-inline-start: 100%;
+  height: 44px;
+  background-color: #1d6a4e;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-year-panel .ant-picker-body .ant-picker-cell-in-range::before
+  ) {
+  height: 44px;
+  background-color: #0b4d32;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-year-panel .ant-picker-body .ant-picker-cell-range-end::before
+  ) {
+  inset-inline-end: 100%;
+  height: 44px;
+  background-color: #1d6a4e;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-year-panel
+      .ant-picker-body
+      .ant-picker-cell-range-start
+      .ant-picker-cell-inner
+  ) {
+  border: 1px solid #1aaf74;
+  border-radius: 8px;
+}
+
+.rangePickerPopup
+  :global(
+    .ant-picker-year-panel
+      .ant-picker-body
+      .ant-picker-cell-range-end
+      .ant-picker-cell-inner
+  ) {
+  border: 1px solid #1aaf74;
+  border-radius: 8px;
+}
+
+/* rangePickerPopupLight */
+.rangePickerPopupLight .navigationIcon {
+  background-color: #efefef;
+  color: #858b93;
+}
+
+.rangePickerPopupLight .navigationIcon:hover {
+  background-color: #c0c0c0;
+}
+
+.rangePickerInputLight input {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.rangePickerPopupLight :global(.ant-picker-panel-container) {
+  background-color: #efefef;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell-in-range.ant-picker-cell-range-start::before
+  ),
+.rangePickerPopupLight
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell-in-range.ant-picker-cell-range-end::before
+  ) {
+  background-color: #b0dccb !important;
+}
+
+.rangePickerPopupLight
+  :global(.ant-picker-date-panel .ant-picker-cell-in-range::before) {
+  background: #b0dccb !important;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-date-panel .ant-picker-cell-in-range .ant-picker-cell-inner
+  ) {
+  background-color: #b0dccb;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell:not(.ant-picker-cell-in-view, .ant-picker-cell-in-range)
+      .ant-picker-cell-inner
+  ) {
+  color: rgba(17, 19, 21, 0.3);
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell:not(.ant-picker-cell-in-view).ant-picker-cell-in-range
+      .ant-picker-cell-inner
+  ) {
+  color: #84cfb1;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-date-panel
+      .ant-picker-cell:not(
+        .ant-picker-cell-in-view
+      ).ant-picker-cell-in-range::before
+  ) {
+  color: #84cfb1;
+  background-color: #cfe5dd;
+}
+
+.rangePickerPopupLight :global(.ant-picker-date-panel .ant-picker-header),
+.rangePickerPopupLight :global(.ant-picker-date-panel .ant-picker-content td) {
+  color: #1a1d1f;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-month-panel
+      .ant-picker-body
+      .ant-picker-cell-range-start::before
+  ) {
+  background-color: #1aaf74;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-month-panel .ant-picker-body .ant-picker-cell-in-range::before
+  ) {
+  background-color: #b0dccb;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-month-panel .ant-picker-body .ant-picker-cell-range-end::before
+  ) {
+  background-color: #1aaf74;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-month-panel
+      .ant-picker-body
+      .ant-picker-cell
+      .ant-picker-cell-inner
+  ) {
+  color: #1a1d1f;
+}
+
+.rangePickerPopupLight
+  :global(.ant-picker-body .ant-picker-cell-disabled .ant-picker-cell-inner) {
+  color: rgba(17, 19, 21, 0.3) !important;
+}
+
+.rangePickerPopupLight .panelContainer {
+  background-color: #efefef;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-month-panel .ant-picker-header-view .ant-picker-year-btn
+  ) {
+  color: #1a1d1f !important;
+}
+
+.rangePickerPopupLight :global(.ant-picker-year-panel .ant-picker-header) {
+  color: #1a1d1f !important;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-year-panel
+      .ant-picker-body
+      .ant-picker-cell
+      .ant-picker-cell-inner
+  ) {
+  color: #1a1d1f;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-year-panel .ant-picker-body .ant-picker-cell-range-start::before
+  ) {
+  background-color: #1aaf74;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-year-panel .ant-picker-body .ant-picker-cell-in-range::before
+  ) {
+  background-color: #b0dccb;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-year-panel .ant-picker-body .ant-picker-cell-range-end::before
+  ) {
+  background-color: #1aaf74;
+}
+
+.rangePickerPopupLight
+  :global(
+    .ant-picker-date-panel .ant-picker-header-view .ant-picker-month-btn
+  ) {
+  background-color: #f9f9f9;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.rangePickerPopupLight
+  :global(.ant-picker-date-panel .ant-picker-header-view .ant-picker-year-btn) {
+  background-color: #f9f9f9;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}

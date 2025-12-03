@@ -1,0 +1,102 @@
+.custom_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.otpInput::placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.otpInput:focus {
+  border-color: #1aaf7480 !important;
+}
+
+.otpInput:focus::placeholder {
+  opacity: 0;
+}
+
+.otp_rounded {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.custom_flex_row {
+  display: flex;
+  align-items: center;
+}
+.custom_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.otpInput::placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.otpInput:focus {
+  border-color: #1aaf7480 !important;
+}
+
+.otpInput:focus::placeholder {
+  opacity: 0;
+}
+
+.otp_rounded {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.custom_flex_row {
+  display: flex;
+  align-items: center;
+}
+.custom_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.otpInput::placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.otpInput:focus {
+  border-color: #1aaf7480 !important;
+}
+
+.otpInput:focus::placeholder {
+  opacity: 0;
+}
+
+.otp_rounded {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.custom_flex_row {
+  display: flex;
+  align-items: center;
+}

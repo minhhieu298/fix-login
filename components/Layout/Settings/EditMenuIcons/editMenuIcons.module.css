@@ -1,0 +1,151 @@
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 57.62px;
+}
+
+.menuBarContainer {
+  border-radius: 16px;
+  border: 1px solid #1aaf74;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.labelLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 70px;
+  width: 117px;
+}
+
+.flexRowEnd {
+  display: flex;
+  align-items: center;
+  /* gap: 12px; */
+  width: 100%;
+  overflow: auto;
+}
+
+.flexRowEnd::-webkit-scrollbar {
+  height: 0px;
+}
+
+.flexRow :global(.flexRowEnd::-webkit-scrollbar-track) {
+  background: #f1f1f1;
+}
+
+.flexRow :global(.flexRowEnd::-webkit-scrollbar-thumb) {
+  background: #888;
+  border-radius: 10px;
+}
+
+.flexRow :global(.flexRowEnd::-webkit-scrollbar-thumb:hover) {
+  background: #555;
+}
+
+/* .flexRowEnd :global(.swiper-wrapper .swiper-slide) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: flex-end;
+} */
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.iconImage {
+  cursor: pointer;
+}
+
+.gridLayoutIcon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.radioContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+}
+
+.searchMenuBarContainer {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addIcon {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.addIcon:hover {
+  filter: brightness(1.3);
+  transform: scale(1.1);
+}
+
+.iconContainerGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  position: relative;
+}
+
+.noResultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 24px;
+}

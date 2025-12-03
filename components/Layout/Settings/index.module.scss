@@ -1,0 +1,129 @@
+.custom_setting_account {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.custom_nav_left {
+  max-width: 260px;
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.list_item {
+  cursor: pointer;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(133, 139, 147, 0.3);
+  gap: 12px;
+  color: inherit;
+}
+
+.list_item:last-of-type {
+  border-bottom: none;
+}
+
+.list_item_label {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+  margin-left: 12px;
+}
+
+.custom_nav_right {
+  flex: 1;
+  width: calc(100% - 280px);
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  // padding: 16px 20px 0;
+  overflow: auto;
+}
+
+.custom_nav_right_head {
+  padding: 12px 16px;
+  display: flex;
+  width: 100%;
+}
+
+.custom_nav_heading {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background: #272b30;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.custom_nav_title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.custom_nav_right_body {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 12px;
+}
+
+.custom_nav_row {
+  // display: flex;
+  // flex-direction: column;
+}
+
+.custom_nav_row_heading {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+.custom_nav_row_item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 0.5px solid #858b934d;
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.custom_nav_item_setting {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.custom_nav_item_img {
+  display: flex;
+  cursor: pointer;
+}
+
+.custom_nav_text_link {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #1aaf74;
+}
+
+.custom_nav_icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

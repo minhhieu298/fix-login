@@ -1,0 +1,17 @@
+.custom-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.hubIcon {
+  margin-right: 8px;
+}
+
+@media (max-width: 573px) {
+  .hubName {
+    display: none;
+  }
+  .hubIcon {
+    margin-right: 0px;
+  }
+}

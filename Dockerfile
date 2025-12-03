@@ -1,0 +1,45 @@
+# Sử dụng Node.js phiên bản 18 làm base image
+FROM node:18-alpine
+
+ENV http_proxy=http://10.26.2.55:8080
+ENV https_proxy=http://10.26.2.55:8080
+ENV NEXT_PUBLIC_NEXT_DOMAIN_GATEWAYS=http://dev.gateway.fpts.com.vn
+ENV NEXT_PUBLIC_NEXT_DOMAIN_MARKETSTREAM=https://gateway.fpts.com.vn
+ENV NEXT_PUBLIC_NEXT_DOMAIN_PUSHER=http://marketstream.fpts.com.vn/pusher
+ENV NEXT_PUBLIC_NEXT_DOMAIN_WEB=http://dev.neweztrade.fpts.com.vn:8086
+ENV NEXT_PRIVATE_LOCAL_WEBPACK=true
+ENV PORT=5001
+ENV NEXT_FORCE_ESBUILD=true
+ENV NEXT_PUBLIC_SENTRY_DSN=https://06c13a0cde4da095af97d5e3dcfe6d3b@sentry.fpts.com.vn/2
+ENV NEXT_PUBLIC_SENTRY_KEY=06c13a0cde4da095af97d5e3dcfe6d3b
+ENV NEXT_PUBLIC_SENTRY_ID=2
+ENV NEXT_PUBLIC_SENTRY_ORG=sentry
+ENV NEXT_PUBLIC_SENTRY_PROJECT=demo-sentry
+ENV NEXT_PUBLIC_SENTRY_URL=https://sentry.fpts.com.vn
+ENV NEXT_PUBLIC_SENTRY_RELEASE=1.0.0
+ENV NEXT_PUBLIC_SENTRY_ENV=production
+ENV NEXT_PUBLIC_NEXT_DS=http://dev.dsaccount.fpts.com.vn
+
+# Đặt thư mục làm việc trong container
+WORKDIR /app
+
+# Sao chép package.json và package-lock.json (nếu có)
+COPY package.json package-lock.json* ./
+
+# Cài đặt các dependencies
+RUN npm install
+
+# Sao chép toàn bộ source code
+COPY . .
+
+# Build ứng dụng Next.js
+RUN npm run build
+
+# Xóa cache Next.js
+RUN rm -rf .next/cache
+
+# Expose cổng 5001
+EXPOSE 5001
+
+# Chạy ứng dụng
+CMD ["node", ".next/standalone/server.js"]

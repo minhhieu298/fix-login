@@ -1,0 +1,107 @@
+.boxContainerMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  &:hover {
+    cursor: pointer;
+  }
+  .boxIcon {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+}
+.detail-container {
+  padding: 12px 16px;
+  .detail-info {
+    width: 100%;
+    .detail-info-line {
+      display: flex;
+      gap: 60px;
+      &:not(:last-child) {
+        padding-bottom: 8px;
+        border-bottom-style: solid;
+        border-bottom-width: 0.5px;
+      }
+
+      &:not(:first-child) {
+        padding-top: 8px;
+      }
+
+      .detail-info-line-item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 50%;
+      }
+    }
+  }
+  .detail-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 66px;
+  }
+  .detail-actions-btn {
+    padding: "8px 24px";
+    flex-grow: 1;
+    border-radius: 12px;
+  }
+}
+.token-logs {
+  padding: 12px 16px;
+  height: 100%;
+  .token-logs-filter {
+    .token-logs-filter-datetime {
+      display: flex;
+      width: 100%;
+      gap: 12px;
+      align-items: center;
+      padding-bottom: 12px;
+    }
+    .MuiFormControl-root {
+      flex: 1;
+    }
+  }
+  .token-logs-info {
+    // height: 400px;
+    .token-logs-info-card {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      &:not(:first-child) {
+        padding-top: 16px;
+      }
+      &:not(:last-child) {
+        padding-bottom: 16px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+      }
+    }
+  }
+}
+
+.custom-scroll {
+  overflow-y: auto;
+
+  /* Scrollbar track */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Scrollbar track background */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Scrollbar thumb */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(17, 19, 21, 0.3);
+    border-radius: 20px;
+    border: 1px solid rgba(51, 56, 63, 1); /* viền mờ như hình */
+  }
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #2c2c2e transparent;
+}

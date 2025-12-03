@@ -1,0 +1,54 @@
+.descriptionBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: calc(100vh - 76px);
+  border-radius: 12px;
+  min-height: 580px;
+  padding: 40px 68px;
+  gap: 40px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.backText {
+  cursor: pointer;
+}
+
+.registerButton {
+  width: 148px;
+  font-size: 12px;
+  font-weight: 500;
+}

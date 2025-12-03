@@ -1,0 +1,153 @@
+/* styles.css */
+.agThemeCustom {
+  --ag-background-color: #1c1a29;
+  --ag-header-background-color: #1c1a29;
+  --ag-header-foreground-color: #1c1a29;
+  --ag-odd-row-background-color: #05040e;
+  /* --ag-value-change-value-highlight-background-color: rgb(78, 192, 78); */
+  --ag-row-hover-color: #353641;
+  --ag-font-size: 12px;
+  --ag-icon-color: #c1c1c1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.flexlayout__layout {
+  --color-tab-unselected: #c1c1c1;
+  --color-tab-selected-background: #1c1a29;
+}
+
+.flash-red {
+  background-color: #c0002e !important;
+  color: #fff !important;
+  /* animation: flash-red 2s forwards; */
+}
+
+.flash-green {
+  background-color: #01a77a !important;
+  color: #fff !important;
+  /* animation: flash-green 2s forwards; */
+}
+
+@keyframes flash-green {
+  0% {
+    background-color: #01a77a;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes flash-red {
+  0% {
+    background-color: #c0002e;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.ag-cell-data-changed {
+  --ag-value-change-value-highlight-background-color: none;
+}
+
+.ag-row {
+  border-bottom: none;
+}
+
+.ag-cell {
+  color: #dfe1e3;
+  border-right: 1px solid #353641;
+  border-bottom: 1px solid #353641;
+  font-size: 12px;
+  padding: 0px 6px !important;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 400;
+}
+
+.ag-column-first {
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-cell-highlight1 {
+  background-color: #2a263c;
+}
+
+.ag-cell-align-start {
+  justify-content: flex-start;
+}
+
+.ag-header-cell {
+  color: #c1c1c1;
+  border-bottom: 1px solid #353641;
+  border-right: 1px solid #353641;
+  padding: 0px 6px;
+}
+
+.ag-header-group-cell {
+  color: #c1c1c1;
+  border-bottom: 1px solid #353641;
+  border-right: 1px solid #353641;
+  padding: 0px 6px;
+}
+
+.ag-header-group-text {
+  text-align: center;
+  width: 100%;
+}
+
+.ag-header-group-cell-label {
+  width: 100%;
+}
+
+.ag-row:hover {
+  background-color: #353641;
+  cursor: pointer;
+}
+
+/* Thanh cuộn dọc */
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 8px;
+}
+
+.ag-body-vertical-scroll-viewport {
+  width: 10px !important;
+  min-width: 10px !important;
+  max-width: 12px !important;
+  margin-top: 4px;
+}
+
+.header-right .ag-header-cell-label {
+  flex-direction: row-reverse;
+}
+
+.ag-row-dragging .ag-cell-tooltip {
+  display: none; /* Ẩn tooltip khi kéo thả */
+}
+
+.ag-cell-color-purple {
+  color: #f23aff;
+}
+
+.ag-cell-color-blue {
+  color: #00c9ff;
+}
+
+.ag-cell-color-yellow {
+  color: #fdff12;
+}
+
+.ag-cell-color-green {
+  color: #0bdf39;
+}
+
+.ag-cell-color-red {
+  color: #ff0017;
+}

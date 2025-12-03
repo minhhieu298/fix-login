@@ -1,0 +1,52 @@
+# Sử dụng Node.js phiên bản 18 làm base image
+FROM node:18-alpine
+
+ENV http_proxy=http://10.26.2.55:8080
+ENV https_proxy=http://10.26.2.55:8080
+ENV NEXT_PUBLIC_NEXT_DOMAIN_GATEWAYS=https://rc.ezfutures.fpts.com.vn
+ENV NEXT_PUBLIC_NEXT_DOMAIN_MARKETSTREAM=https://gateway.fpts.com.vn
+ENV NEXT_PUBLIC_NEXT_DOMAIN_PUSHER=http://pusheruat.fpts.com.vn/pusher
+ENV NEXT_PUBLIC_NEXT_DOMAIN_WEB=http://uat.neweztrade.fpts.com.vn
+ENV NEXT_PRIVATE_LOCAL_WEBPACK=true
+ENV PORT=5001
+ENV NEXT_FORCE_ESBUILD=true
+ENV NEXT_PUBLIC_SENTRY_DSN=https://36f363380f373af5a229049d289b8245@sentry.fpts.com.vn/15
+ENV NEXT_PUBLIC_SENTRY_KEY=36f363380f373af5a229049d289b8245
+ENV NEXT_PUBLIC_SENTRY_ID=15
+ENV NEXT_PUBLIC_SENTRY_ORG=sentry
+ENV NEXT_PUBLIC_SENTRY_PROJECT=uat-eztrade
+ENV NEXT_PUBLIC_SENTRY_URL=https://sentry.fpts.com.vn
+ENV NEXT_PUBLIC_SENTRY_RELEASE=1.0.0
+ENV NEXT_PUBLIC_SENTRY_ENV=production
+
+RUN apk add --no-cache gcompat
+
+# Fix DNS cho npm/yarn/pnpm (tránh lỗi EAI_AGAIN)
+RUN npm config set registry https://registry.npmjs.org/ \
+ && npm config set fetch-retries 5 \
+ && npm config set fetch-retry-mintimeout 20000 \
+ && npm config set fetch-retry-maxtimeout 120000
+
+# Đặt thư mục làm việc trong container
+WORKDIR /app
+
+# Sao chép package.json và package-lock.json (nếu có)
+COPY package.json package-lock.json* ./
+
+# Cài đặt các dependencies
+RUN npm install
+
+# Sao chép toàn bộ source code
+COPY . .
+
+# Build ứng dụng Next.js
+RUN npm run build
+
+# Xóa cache Next.js
+RUN rm -rf .next/cache
+
+# Expose cổng 5001
+EXPOSE 5001
+
+# Chạy ứng dụng
+CMD ["node", ".next/standalone/server.js"]

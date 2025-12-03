@@ -1,0 +1,21 @@
+.custom_box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.otpInput::placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.otpInput:focus::placeholder {
+  opacity: 0;
+}
+
+.custom_form_login {
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  gap: 20px;
+}

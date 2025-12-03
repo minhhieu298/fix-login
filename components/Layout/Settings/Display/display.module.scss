@@ -1,0 +1,102 @@
+.setting_display {
+  border: 1px solid #1aaf74;
+}
+
+.setting_display_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting_display_title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0;
+}
+
+.setting_display_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.setting_display_box_text {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+  color: #efefef;
+}
+
+.setting_display_upload {
+  color: #1aaf74;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  .text_upload {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+
+.setting_img {
+  display: flex;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.setting_display_tab {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.setting_display_icon {
+  cursor: pointer;
+}
+
+.display_container {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.display_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.display_box_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.display_box_lang {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.display_menu_bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}

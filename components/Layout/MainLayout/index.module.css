@@ -1,0 +1,40 @@
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.wrapIconVertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapIconHorizontal {
+  display: flex;
+  align-items: center;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 68px;
+  cursor: pointer;
+}
+
+.truncateVertical {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 50px;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  padding: 3px 12px 3px 20px;
+}

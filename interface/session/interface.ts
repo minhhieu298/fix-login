@@ -1,0 +1,77 @@
+import { IResponseData } from "../interface";
+
+export interface SessionData {
+  LoginName: string;
+  Password: string | null;
+  TradingPassword: string | null;
+  Source: string | null;
+  IpClient: string | null;
+  IpServer: string | null;
+  SessionToken: string;
+  Referer: string | null;
+  UserAgent: string | null;
+  Browser: string | null;
+  IsMobile: boolean | null;
+  BrowserName: string | null;
+  BrowserVers: string | null;
+  ClientCode: string;
+  ClientName: string;
+  SessionNo: string;
+  ErrorCode: number;
+  Message: string;
+  CheckSession: number;
+  LoginStatus: number;
+  RsaToken: number;
+  CheckTradingPassword: number;
+  RsaResult: number;
+  Jwt: string;
+  IsCheckSessionSuccess: boolean;
+  IsFirstLogin: boolean;
+  IsRsaTokenTradingPassword: boolean;
+  RsaMessage: string;
+  CheckPass2: number;
+  TradingPass1By1: number;
+  OldPass: string | null;
+  NewPass: string | null;
+  OldTradePass: string | null;
+  NewTradePass: string | null;
+  IntResult: number;
+  Areason: number;
+  Language: string | null;
+  Activity: string | null;
+  fromDate: string | null;
+  toDate: string | null;
+  Arsatokenupdtype: string | null;
+  Arsatokenupddesc: string | null;
+  Aupduser: string | null;
+  Aupdtbtntype: string | null;
+  Brkid: string | null;
+  Asupportpass: number;
+  Permit: string | null;
+  OTPVerifed: number;
+  SMS: string;
+  ATRANSACTION: number;
+  CountOtpFalse: number;
+  StattusOtp: number;
+  TypeOtp: string | null;
+  TimeServer: string; // Có thể dùng Date nếu cần chuyển đổi
+  smsOTP: string | null;
+  emailOTP: string | null;
+  OTP: string | null;
+  Email: string;
+  ActivityDesc: string | null;
+  Login2FA: number;
+  TypeAccount: number;
+  SetTradingPass1By1: {
+    DateEnd: string | null;
+    TimeExpire: number;
+  };
+  Avatar: string | null;
+  ShortName: string | null;
+  TimeExprire1By1: number;
+  Device: string | null;
+  Adomestic: number;
+  CostCenter: number;
+}
+
+export type IResponseSession = IResponseData<SessionData>;

@@ -1,0 +1,43 @@
+.menuMobileWrapper {
+  padding: 12px 0px 16px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.titleMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 12px;
+}
+
+.wrapIcon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.wrapMenu {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  max-height: 396px;
+  overflow-y: auto;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 12px 12px 16px;
+  cursor: pointer;
+}
+
+.wrapBtnLogin {
+  padding: 0px 12px;
+}

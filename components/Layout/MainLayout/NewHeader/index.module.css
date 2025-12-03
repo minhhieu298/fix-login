@@ -1,0 +1,230 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  min-height: 44px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoWrapper {
+  position: relative;
+  width: 40.05px;
+  height: 32px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.promotionWrapper {
+  position: relative;
+  width: 98.46px;
+  height: 32px;
+  flex-shrink: 0;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.promotionImage {
+  object-fit: contain;
+}
+
+.zeroFeeWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 2px;
+  transform: skew(-16deg);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.zeroFeeWrapper::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  width: calc(100% + 200%);
+  height: calc(100% + 200%);
+  background: conic-gradient(
+    from 0deg,
+    rgba(248, 147, 255, 1) 0deg,
+    rgba(238, 216, 255, 1) 60deg,
+    rgba(152, 50, 232, 1) 120deg,
+    rgba(248, 147, 255, 1) 180deg,
+    rgba(238, 216, 255, 1) 240deg,
+    rgba(152, 50, 232, 1) 300deg,
+    rgba(248, 147, 255, 1) 360deg
+  );
+  animation: rotateBorder 3s linear infinite;
+  z-index: 0;
+}
+
+.zeroFeeWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #d9a8ff, #a93aff);
+  z-index: 1;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.zeroFeeContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 6px 20px 6px 16px;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transform: skew(0deg);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.zeroFeeText {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transform: skew(16deg);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.newTag {
+  position: absolute;
+  top: 8px;
+  right: -8px;
+  background: #1aaf74;
+  border: 0.62px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 2.46px;
+  padding: 0px 2.46px;
+  line-height: 1;
+  font-size: 9px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 3;
+  height: 14px;
+  min-width: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.headerRightIcon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loginMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loginButton {
+  padding: 7.5px 16px;
+  min-width: 103px;
+  border-radius: 100px;
+  background: #1aaf74;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  &:hover {
+    background: #51d6a1;
+  }
+}
+
+.openAccountWrapper {
+  position: relative;
+  display: inline-block;
+  padding: 1px;
+  border-radius: 36px;
+  background: conic-gradient(
+    from 0deg,
+    #f36f21 0deg,
+    #22b24c 90deg,
+    #f36f21 180deg,
+    #0066b3 270deg,
+    #f36f21 360deg
+  );
+  max-width: 116px;
+  width: 100%;
+}
+
+.wrapIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background: rgba(26, 175, 116, 0.3);
+  }
+}
+
+.sectionItemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0px 20.5px 10px 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 200px;
+  height: auto;
+  border-right: 0.5px solid rgb(133 139 147 / 30%);
+  box-sizing: border-box;
+}
+
+.sectionItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionItemLink {
+  text-decoration: none;
+  display: block;
+}
+
+.sectionItemLink:hover span {
+  color: #1aaf74;
+}
