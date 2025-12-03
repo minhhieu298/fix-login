@@ -81,7 +81,7 @@ const LoginForm = () => {
       if (response.Code === 0) {
         setCookie("aspfpt_sessiontoken", response.Data?.Jwt, {
           // để domain như này khi chạy local phải setup host về domain như dưới
-          domain: ".fpts.com.vn",
+          // //domain: ".fpts.com.vn",
           path: "/",
         });
         replay?.start();

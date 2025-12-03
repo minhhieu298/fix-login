@@ -36,7 +36,7 @@ export const secondaryApi = Axios.create({
 export const getJwtToken = () => {
   return (
     getCookie("aspfpt_sessiontoken", {
-      domain: ".fpts.com.vn",
+      //domain: ".fpts.com.vn",
       path: "/",
     }) || ""
   ); // Lấy JWT từ cookie, tên key là "jwt"

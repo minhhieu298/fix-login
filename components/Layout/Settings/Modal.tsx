@@ -183,7 +183,7 @@ const ModalPopup = () => {
     const response = await Logout();
     if (response.Code === -123456) {
       deleteCookie("aspfpt_sessiontoken", {
-        domain: ".fpts.com.vn",
+        //domain: ".fpts.com.vn",
         path: "",
       });
     } else {
@@ -201,7 +201,7 @@ const ModalPopup = () => {
           }
         }
         deleteCookie("aspfpt_sessiontoken", {
-          domain: ".fpts.com.vn",
+          //domain: ".fpts.com.vn",
           path: "",
         });
         // //dispatch(AuthAction.showForm(true));

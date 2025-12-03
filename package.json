@@ -9,18 +9,14 @@
     "prepare": "husky install",
     "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,scss,css}\"",
-
-    
     "docker:build:uat": "docker build -f Dockerfile.uat -t newwebtrade:uat .",
     "docker:build:prod": "docker build -f Dockerfile.production -t newwebtrade:prod .",
     "docker:build:krx": "docker build -f Dockerfile.krx -t newwebtrade:krx .",
     "docker:build:local": "docker build -f Dockerfile -t newwebtrade:local .",
-
     "docker:run:uat": "docker rm -f newwebtrade-uat 2>/dev/null || true && docker run -d -p 5001:5001 --name newwebtrade-uat newwebtrade:uat",
     "docker:run:prod": "docker rm -f newwebtrade-prod 2>/dev/null || true && docker run -d -p 5002:5001 --name newwebtrade-prod newwebtrade:prod",
     "docker:run:krx": "docker rm -f newwebtrade-krx 2>/dev/null || true && docker run -d -p 5003:5001 --name newwebtrade-krx newwebtrade:krx",
     "docker:run:local": "docker rm -f newwebtrade-local 2>/dev/null || true && docker run -d -p 5004:5001 --name newwebtrade-local newwebtrade:local",
-
     "docker:restart:uat": "npm run docker:build:uat && npm run docker:run:uat",
     "docker:clean": "docker ps -a | grep newwebtrade | awk '{print $1}' | xargs -r docker rm -f"
   },
@@ -88,7 +84,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/lodash": "^4.17.16",
-    "@types/node": "^20",
+    "@types/node": "^20.19.25",
     "@types/node-fetch": "^2.6.13",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
