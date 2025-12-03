@@ -82,7 +82,9 @@ const LoginForm = () => {
         setCookie("aspfpt_sessiontoken", response.Data?.Jwt, {
           // để domain như này khi chạy local phải setup host về domain như dưới
           // //domain: ".fpts.com.vn",
-          path: "/",
+          httpOnly: true,
+          secure: true, // Vercel dùng HTTPS
+          sameSite: "lax",
         });
         replay?.start();
         router.push({
