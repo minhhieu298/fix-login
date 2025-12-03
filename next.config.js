@@ -26,7 +26,7 @@ const remoteUrls = {
 module.exports = {
   reactStrictMode: false,
   output: "standalone",
-  productionBrowserSourceMaps: false,
+  productionBrowserSourceMaps: true,
   eslint: {
     ignoreDuringBuilds: false,
   },
